@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clicks
+
+Clicks is a web application showcasing your photography hobby with additional features such as image-to-text conversion and seamless storage using Supabase.
+
+---
+
+## Features
+
+- **Photography Showcase:** Display a gallery of your clicked photographs.
+- **Image-to-Text Conversion:** Extract text from images using Hugging Face API.
+- **Supabase Integration:** Store your photos and related metadata securely.
+
+---
+
+## Tech Stack
+
+- **Frontend:** Next.js
+- **Backend:** Supabase + Next.js
+- **Image Processing:** Hugging Face API
+- **Storage:** Supabase Cloud Storage
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Node.js and npm installed on your machine.
+2. A Supabase project with its URL and anon key.
+3. A Hugging Face API key.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo/clicks.git
+   cd clicks
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file and populate it as shown in the `.env.example`:
+
+   ```plaintext
+   NEXT_PUBLIC_SUPABASE_URL="SUPABASE_URL"
+   NEXT_PUBLIC_SUPABASE_ANON_KEY="SUPABASE_KEY"
+   NEXT_PUBLIC_HUGGING_FACE_API="your_hugging_face_api"
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   Your application will be available at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Usage
+
+### Photography Showcase
+
+- Add your favorite photos to the Supabase storage bucket.
+- Use the app's interface to organize and display your photo gallery.
+
+### Image-to-Text Feature
+
+- Upload an image to the app.
+- The extracted text will be displayed using Hugging Face’s API.
+
+---
+
+## Folder Structure
+
+```
+.
+├── public       # Static assets such as images
+├── src
+│   ├── components # Reusable components for the UI
+│   ├── pages      # Next.js pages
+│   ├── styles     # CSS modules
+│   └── utils      # Utility functions for API calls
+├── .env.example # Example environment variables
+├── package.json  # Project dependencies
+└── README.md     # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Supabase
 
-## Learn More
+- Create a storage bucket in Supabase for storing images.
+- Configure Supabase project keys in your `.env.local` file.
 
-To learn more about Next.js, take a look at the following resources:
+### Hugging Face
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Obtain an API key from [Hugging Face](https://huggingface.co/).
+- Add it to the `.env.local` file.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Build the application:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run build
+   ```
+
+2. Deploy to a hosting platform (e.g., Vercel, Netlify).
+
+3. Configure the environment variables on the hosting platform as shown in `.env.example`.
