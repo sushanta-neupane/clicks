@@ -4,7 +4,7 @@ import Header from '../components/Header/header';
 
 export const metadata: Metadata = {
     title: "Home-Clicks",
-    description: "Photo click by Sushanta",
+    description: "Photo Showcase",
 };
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {

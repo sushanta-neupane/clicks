@@ -16,7 +16,7 @@ const poppinsSans = Poppins({
 
 export const metadata: Metadata = {
   title: "Clicks",
-  description: "Photo click by Sushanta",
+  description: "Photo Showcase",
 };
 
 export default async function RootLayout({
